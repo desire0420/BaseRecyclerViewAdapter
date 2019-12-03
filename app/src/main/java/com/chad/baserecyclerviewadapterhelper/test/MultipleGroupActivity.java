@@ -120,8 +120,8 @@ public class MultipleGroupActivity extends BaseActivity {
             mData.add(new MultipleGroupItem(true, "Section 1", true));//头部
             //内容
             FenGroupBean bean = new FenGroupBean("http://pic38.nipic.com/20140225/2531170_214014788000_2.jpg", "我是内容--");
-            mData.add(new MultipleGroupItem(MultipleGroupItem.TEXT, 4, bean));
-            mData.add(new MultipleGroupItem(MultipleGroupItem.TEXT, 4, bean));
+            mData.add(new MultipleGroupItem(MultipleGroupItem.TEXT, 2, bean));
+            mData.add(new MultipleGroupItem(MultipleGroupItem.TEXT, 2, bean));
             mData.add(new MultipleGroupItem(MultipleGroupItem.IMG_TEXT, 4, bean));
 
 
