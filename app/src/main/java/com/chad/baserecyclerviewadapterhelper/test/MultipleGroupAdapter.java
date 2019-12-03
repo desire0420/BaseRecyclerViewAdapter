@@ -19,9 +19,10 @@ public class MultipleGroupAdapter extends BaseSectionMultiItemQuickAdapter<Multi
 
     public MultipleGroupAdapter(int sectionHeadResId, List data) {
         super(sectionHeadResId, data);
-        addItemType(MultipleGroupItem.TEXT, R.layout.item_text_view);
-        addItemType(MultipleGroupItem.IMG_TEXT, R.layout.item_img_text_view);
-        addItemType(MultipleGroupItem.GIRD, R.layout.home_item_view);
+        addItemType(MultipleGroupItem.GIRD, R.layout.item_text_group);
+        addItemType(MultipleGroupItem.TEXT, R.layout.item_text_item);
+        addItemType(MultipleGroupItem.IMG_TEXT, R.layout.item_text_image);
+
 
     }
 
@@ -30,21 +31,28 @@ public class MultipleGroupAdapter extends BaseSectionMultiItemQuickAdapter<Multi
         // deal with header viewHolder
         helper.setText(R.id.header, item.header);
         helper.setVisible(R.id.more, item.isMore());
-        helper.addOnClickListener(R.id.more);
+       // helper.addOnClickListener(R.id.more);
     }
 
     @Override
     protected void convert(@NonNull BaseViewHolder helper, MultipleGroupItem item) {
         // deal with multiple type items viewHolder
-        helper.addOnClickListener(R.id.card_view);
-        helper.addOnClickListener(R.id.tv);
+//        helper.addOnClickListener(R.id.menu_item);
+//        helper.addOnClickListener(R.id.item_text_image_ll);
+//        helper.addOnClickListener(R.id.tv_content);
+
+
+
 
         switch (helper.getItemViewType()) {
-            case MultipleItem.TEXT:
+            case MultipleGroupItem.GIRD:
+                helper.setImageResource(R.id.icon, R.mipmap.girl);
+                break;
+            case MultipleGroupItem.TEXT:
                 helper.setText(R.id.tv, item.getVideo().getName());
                 break;
 
-            case MultipleItem.IMG_TEXT:
+            case MultipleGroupItem.IMG_TEXT:
                 switch (helper.getLayoutPosition() % 2) {
                     case 0:
                         helper.setImageResource(R.id.iv, R.mipmap.girl);

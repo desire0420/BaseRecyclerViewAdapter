@@ -15,6 +15,7 @@ public class MultipleGroupItem extends SectionMultiEntity<FenGroupBean> implemen
 
 
     private int itemType;
+    private int spanSize;
     private boolean isMore;
     private FenGroupBean video;
 
@@ -23,10 +24,23 @@ public class MultipleGroupItem extends SectionMultiEntity<FenGroupBean> implemen
         this.isMore = isMore;
     }
 
-    public MultipleGroupItem(int itemType, FenGroupBean video) {
+    public MultipleGroupItem(int itemType, int spanSize, FenGroupBean video) {
         super(video);
         this.video = video;
         this.itemType = itemType;
+        this.spanSize = spanSize;
+    }
+
+    public void setItemType(int itemType) {
+        this.itemType = itemType;
+    }
+
+    public int getSpanSize() {
+        return spanSize;
+    }
+
+    public void setSpanSize(int spanSize) {
+        this.spanSize = spanSize;
     }
 
     public boolean isMore() {
