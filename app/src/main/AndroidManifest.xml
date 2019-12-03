@@ -38,6 +38,11 @@
         <activity android:name=".UpFetchUseActivity"/>
         <activity android:name=".SectionMultipleItemUseActivity"/>
         <activity android:name=".DiffUtilActivity"/>
+        <activity android:name=".test.FenGroupActivity"/>
+        <activity android:name=".test.MultipleGroupActivity"/>
+
+
+
     </application>
 
 </manifest>

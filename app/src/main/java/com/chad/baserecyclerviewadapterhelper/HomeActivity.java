@@ -9,6 +9,8 @@ import android.view.ViewGroup;
 
 import com.chad.baserecyclerviewadapterhelper.adapter.HomeAdapter;
 import com.chad.baserecyclerviewadapterhelper.entity.HomeItem;
+import com.chad.baserecyclerviewadapterhelper.test.FenGroupActivity;
+import com.chad.baserecyclerviewadapterhelper.test.MultipleGroupActivity;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 
 import java.util.Arrays;
@@ -50,6 +52,8 @@ public class HomeActivity extends AppCompatActivity {
 
     private List<HomeItem> getHomeItemData() {
         return Arrays.asList(
+                new HomeItem("分组多布局", MultipleGroupActivity.class, R.mipmap.gv_databinding),
+                new HomeItem("分组布局", FenGroupActivity.class, R.mipmap.gv_databinding),
                 new HomeItem("Animation", AnimationUseActivity.class, R.mipmap.gv_animation),
                 new HomeItem("MultipleItem", ChooseMultipleItemUseTypeActivity.class, R.mipmap.gv_multipleltem),
                 new HomeItem("Header/Footer", HeaderAndFooterUseActivity.class, R.mipmap.gv_header_and_footer),
