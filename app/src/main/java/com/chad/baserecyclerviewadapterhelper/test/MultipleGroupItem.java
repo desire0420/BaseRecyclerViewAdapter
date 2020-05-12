@@ -12,6 +12,16 @@ public class MultipleGroupItem extends SectionMultiEntity<FenGroupBean> implemen
     public static final int TEXT = 1;
     public static final int GIRD = 2;
     public static final int IMG_TEXT = 3;
+    public static final int HEART_CARD_ITEM = 4;
+    public static final int VAULE_QUESTION_ITEM = 5;
+    public static final int BASE_DATA_INFO = 6;
+    public static final int PERSION_IMAGE_ITEM = 7;//个人相册
+    public static final int IEEA_LIFE_ITEM = 8;//理想生活
+
+
+
+
+
 
 
     private int itemType;
@@ -19,9 +29,10 @@ public class MultipleGroupItem extends SectionMultiEntity<FenGroupBean> implemen
     private boolean isMore;
     private FenGroupBean video;
 
-    public MultipleGroupItem(boolean isHeader, String header, boolean isMore) {
+    public MultipleGroupItem(int itemType,boolean isHeader, String header, boolean isMore) {
         super(isHeader, header);
         this.isMore = isMore;
+        this.itemType = itemType;
     }
 
     public MultipleGroupItem(int itemType, int spanSize, FenGroupBean video) {

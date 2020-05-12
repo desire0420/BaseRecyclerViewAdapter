@@ -31,15 +31,18 @@ public class MultipleGroupAdapter extends BaseSectionMultiItemQuickAdapter<Multi
         // deal with header viewHolder
         helper.setText(R.id.header, item.header);
         helper.setVisible(R.id.more, item.isMore());
+       // helper.setVisible(R.id.card_view, false);
+
+
        // helper.addOnClickListener(R.id.more);
     }
 
     @Override
     protected void convert(@NonNull BaseViewHolder helper, MultipleGroupItem item) {
         // deal with multiple type items viewHolder
-//        helper.addOnClickListener(R.id.menu_item);
-//        helper.addOnClickListener(R.id.item_text_image_ll);
-//        helper.addOnClickListener(R.id.tv_content);
+        helper.addOnClickListener(R.id.menu_item);
+        helper.addOnClickListener(R.id.item_text_image_ll);
+        helper.addOnClickListener(R.id.tv_content);
 
 
 
